@@ -4,7 +4,7 @@ import java.io.FileWriter;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class Libros {
+public class Libros2 {
 
 	public static void main(String[] args) {
 		/*String texto = "<Libros><Libro><Titulo>100 años de soledad<Titulo><Libro><Libros>";
@@ -22,14 +22,15 @@ public class Libros {
 			e.printStackTrace();
 		}*/		
 		
-		try {
-			FileWriter fw_ficheros = new FileWriter(nombreFichero);
+		try (FileWriter fw_ficheros = new FileWriter(nombreFichero);
+			FileReader fr_ficheros = new FileReader(nombreFichero);){
+			
 			
 			fw_ficheros.write(textoFichero);
 			fw_ficheros.write(100);
 			fw_ficheros.flush();
 			
-			FileReader fr_ficheros = new FileReader(nombreFichero);
+			
 			
 			//Leemos el fichero y lo mostramos por pantalla
 			int valor = fr_ficheros.read();
@@ -39,8 +40,6 @@ public class Libros {
 				valor = fr_ficheros.read();
 			}		
 			
-			fw_ficheros.close();
-			fr_ficheros.close();
 		} catch (IOException e) {			
 			System.out.print("ERROR");
 		}
