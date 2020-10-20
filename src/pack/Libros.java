@@ -9,7 +9,7 @@ public class Libros {
 	public static void main(String[] args) {
 		/*String texto = "<Libros><Libro><Titulo>100 años de soledad<Titulo><Libro><Libros>";
 		String nombre = "libros.xml";*/
-		String textoFichero = "100 años de soleda";
+		String textoFichero = "100 años de soledad";
 		String nombreFichero = "fichero1.txt";
 		
 		
