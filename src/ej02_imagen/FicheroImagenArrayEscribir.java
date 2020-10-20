@@ -61,7 +61,6 @@ public static void main(String[] args) throws IOException {
 			e.printStackTrace();
 		}
 		
-		
 	}//FIN escribirDatos
 
 }//FIN FicheroImagenArrayEscribir
