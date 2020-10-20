@@ -56,12 +56,12 @@ public static void main(String[] args) throws IOException {
 				fos.write(caracter);
 			}
 			
-			
+			fos.close();
 		} catch (FileNotFoundException e) {			
 			e.printStackTrace();
 		}
 		
-		//fos.close();
+		
 	}//FIN escribirDatos
 
 }//FIN FicheroImagenArrayEscribir
